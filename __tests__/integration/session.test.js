@@ -24,7 +24,7 @@ describe('Authentication', () => {
     expect(response.status).toBe(200);
   });
 
-  it('should not authentucate with invalid credentials', async () => {
+  it('should not authenticate with invalid credentials', async () => {
     const user = await factory.create('User', {
       password: '123123',
     });
@@ -39,7 +39,7 @@ describe('Authentication', () => {
     expect(response.status).toBe(401);
   });
 
-  it('should return jwt token when authenticade', async () => {
+  it('should return jwt token when authenticated', async () => {
     const user = await factory.create('User', {
       password: '123123',
     });
